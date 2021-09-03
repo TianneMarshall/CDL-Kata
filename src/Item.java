@@ -1,11 +1,11 @@
 
 public class Item {
 
-	private int item_price;
-	private int currentQuantity;
-	private int multiQuantity;
-	private int total;
-	private int multiPrice;
+	protected int item_price;
+	protected int currentQuantity;
+	protected int multiQuantity;
+	protected int total;
+	protected int multiPrice;
 	
 	public Item() {
 		
@@ -27,12 +27,13 @@ public class Item {
 	public void increaseQuantity(String item) {
 		currentQuantity += 1; 
 		total += item_price;
-		if(currentQuantity % multiQuantity == 0) { 
-			// calculate the none discount price and minus the new discount price to get the difference
-			int discount = (item_price * multiQuantity) - multiPrice;
-			total -= discount;
+		if(multiQuantity != 0) {
+			if(currentQuantity % multiQuantity == 0) { 
+				// calculate the none discount price and minus the new discount price to get the difference
+				int discount = (item_price * multiQuantity) - multiPrice;
+				total -= discount;
+			}
 		}
-		System.out.println(total);
 	}
 	
 }

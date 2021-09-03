@@ -52,7 +52,9 @@ public class Main {
 		}
 		
 		boolean shopping = true;
+		
 		while(shopping) {
+			int totals = 0;
 			System.out.println("What would you like?");
 			input = scan.nextLine();
 			
@@ -73,6 +75,11 @@ public class Main {
 					System.out.println("Invalid product");
 					break;
 			}
+			
+			for(Item product : items) {
+				totals += product.total;
+			}
+			System.out.println("The new total is " + totals);
 			
 		}
 	}
