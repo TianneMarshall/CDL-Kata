@@ -1,8 +1,11 @@
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		Scanner scan = new Scanner(System.in);
 		
 		Item A = new Item();
 		Item B = new Item();
@@ -19,6 +22,22 @@ public class Main {
 		C.setPrice(20);
 		
 		D.setPrice(15);
+		
+		System.out.println("What would you like?");
+		String input = scan.nextLine();
+		
+		if(input.equals("A")) {
+			A.increaseQuantity(input);
+		}
+		boolean shopping = true;
+		while(shopping) {
+			System.out.println("What would you like?");
+			input = scan.nextLine();
+			
+			if(input.equals("A")) {
+				A.increaseQuantity(input);
+			}
+		}
 	}
 
 }
