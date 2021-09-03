@@ -30,57 +30,42 @@ public class Main {
 		items.add(C);
 		items.add(D);
 		
-		System.out.println("What would you like?");
-		String input = scan.nextLine();
-		
-		switch(input) {
-			case "A":
-				A.increaseQuantity(input);
-				break;
-			case "B":
-				B.increaseQuantity(input);
-				break;
-			case "C":
-				C.increaseQuantity(input);
-				break;
-			case "D":
-				D.increaseQuantity(input);
-				break;
-			default:
-				System.out.println("Invalid product");
-				break;
-		}
-		
 		boolean shopping = true;
 		
 		while(shopping) {
 			int totals = 0;
-			System.out.println("What would you like?");
-			input = scan.nextLine();
+			System.out.println("Would you like to shop? Y or N");
+			String input = scan.nextLine();
 			
-			switch(input) {
-				case "A":
-					A.increaseQuantity(input);
-					break;
-				case "B":
-					B.increaseQuantity(input);
-					break;
-				case "C":
-					C.increaseQuantity(input);
-					break;
-				case "D":
-					D.increaseQuantity(input);
-					break;
-				default:
-					System.out.println("Invalid product");
-					break;
+			if(input.equals("Y")) {
+				System.out.println("Choose a product");
+				input = scan.nextLine();
+				
+				switch(input) {
+					case "A":
+						A.increaseQuantity(input);
+						break;
+					case "B":
+						B.increaseQuantity(input);
+						break;
+					case "C":
+						C.increaseQuantity(input);
+						break;
+					case "D":
+						D.increaseQuantity(input);
+						break;
+					default:
+						System.out.println("Invalid product");
+						break;
+				}
+				for(Item product : items) {
+					totals += product.total;
+				}
+				System.out.println("The new total is " + totals);
 			}
-			
-			for(Item product : items) {
-				totals += product.total;
+			else {
+				shopping = false;
 			}
-			System.out.println("The new total is " + totals);
-			
 		}
 	}
 
