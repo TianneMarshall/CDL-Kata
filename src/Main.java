@@ -10,8 +10,11 @@ public class Main {
 		Item D = new Item();
 		
 		A.setPrice(50);
+		// first parameter is the quantity in multibuy offer, second parameter is the new discount price
+		A.setMultibuy(3, 130);
 		
 		B.setPrice(30);
+		B.setMultibuy(2, 45);
 		
 		C.setPrice(20);
 		
