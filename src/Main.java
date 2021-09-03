@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -6,6 +7,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		Scanner scan = new Scanner(System.in);
+		ArrayList<Item> items = new ArrayList<Item>();
 		
 		Item A = new Item();
 		Item B = new Item();
@@ -23,20 +25,49 @@ public class Main {
 		
 		D.setPrice(15);
 		
+		items.add(A);
+		items.add(B);
+		items.add(C);
+		items.add(D);
+		
 		System.out.println("What would you like?");
 		String input = scan.nextLine();
 		
-		if(input.equals("A")) {
-			A.increaseQuantity(input);
+		switch(input) {
+			case "A":
+				A.increaseQuantity(input);
+				break;
+			case "B":
+				B.increaseQuantity(input);
+				break;
+			case "C":
+				C.increaseQuantity(input);
+				break;
+			case "D":
+				D.increaseQuantity(input);
+				break;
 		}
+		
 		boolean shopping = true;
 		while(shopping) {
 			System.out.println("What would you like?");
 			input = scan.nextLine();
 			
-			if(input.equals("A")) {
-				A.increaseQuantity(input);
+			switch(input) {
+				case "A":
+					A.increaseQuantity(input);
+					break;
+				case "B":
+					B.increaseQuantity(input);
+					break;
+				case "C":
+					C.increaseQuantity(input);
+					break;
+				case "D":
+					D.increaseQuantity(input);
+					break;
 			}
+			
 		}
 	}
 
