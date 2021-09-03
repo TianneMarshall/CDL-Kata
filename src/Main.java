@@ -46,6 +46,9 @@ public class Main {
 			case "D":
 				D.increaseQuantity(input);
 				break;
+			default:
+				System.out.println("Invalid product");
+				break;
 		}
 		
 		boolean shopping = true;
@@ -65,6 +68,9 @@ public class Main {
 					break;
 				case "D":
 					D.increaseQuantity(input);
+					break;
+				default:
+					System.out.println("Invalid product");
 					break;
 			}
 			
