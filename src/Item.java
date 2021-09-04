@@ -6,9 +6,14 @@ public class Item {
 	protected int multiQuantity;
 	protected int total;
 	protected int multiPrice;
+	protected String name;
 	
-	public Item() {
-		
+	public Item(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return name;
 	}
 	
 	public int getPrice() {
@@ -33,6 +38,7 @@ public class Item {
 				int discount = (item_price * multiQuantity) - multiPrice;
 				total -= discount;
 			}
+			System.out.println(name + "  +  " + total);
 		}
 	}
 	
