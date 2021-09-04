@@ -41,27 +41,6 @@ public class Main {
 				System.out.println("Choose a product");
 				input = scan.nextLine();
 				
-/*				switch(input) {
-					case "A":
-						A.increaseQuantity(input);
-						totals += A.total;
-						break;
-					case "B":
-						B.increaseQuantity(input);
-						totals += B.total;
-						break;
-					case "C":
-						C.increaseQuantity(input);
-						totals += C.total;
-						break;
-					case "D":
-						D.increaseQuantity(input);
-						totals += D.total;
-						break;
-					default:
-						System.out.println("Invalid product");
-						break;
-*/
 				for(int i = 0; i < items.size(); i++) {
 					if(items.get(i).getName().equals(input)) {
 						System.out.println("You have entered " + items.get(i).getName());
