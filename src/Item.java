@@ -38,7 +38,6 @@ public class Item {
 				int discount = (item_price * multiQuantity) - multiPrice;
 				total -= discount;
 			}
-			System.out.println(name + "  +  " + total);
 		}
 	}
 	

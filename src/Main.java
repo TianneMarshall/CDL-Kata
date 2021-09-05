@@ -43,14 +43,18 @@ public class Main {
 				
 				for(int i = 0; i < items.size(); i++) {
 					if(items.get(i).getName().equals(input)) {
-						System.out.println("You have entered " + items.get(i).getName());
 						items.get(i).increaseQuantity(input);
 					}
 				}
+				
+				for(int i = 0; i < items.size(); i++) {
+					totals += items.get(i).total;
+				}
 
-				System.out.println("The new total is " + totals);
+				System.out.println("Your total is " + totals);
 			}
 			else {
+				System.out.println("Your complete total is " + totals);
 				shopping = false;
 			}
 		}
