@@ -45,12 +45,8 @@ public class Main {
 					if(items.get(i).getName().equals(input)) {
 						items.get(i).increaseQuantity(input);
 					}
+					totals += items.get(i).total;  // calculate running total
 				}
-				
-				for(int i = 0; i < items.size(); i++) {
-					totals += items.get(i).total;
-				}
-
 				System.out.println("Your total is " + totals);
 			}
 			else {
