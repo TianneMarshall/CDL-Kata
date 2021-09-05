@@ -31,13 +31,13 @@ public class Main {
 		items.add(D);
 		
 		boolean shopping = true;
-		
+		int totals = 0;
 		while(shopping) {
-			int totals = 0;
 			System.out.println("Would you like to shop? Y or N");
 			String input = scan.nextLine();
 			
 			if(input.equals("Y")) {
+				totals = 0;
 				System.out.println("Choose a product");
 				input = scan.nextLine();
 				
@@ -59,5 +59,4 @@ public class Main {
 			}
 		}
 	}
-
 }
