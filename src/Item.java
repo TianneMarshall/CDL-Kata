@@ -1,12 +1,12 @@
 
 public class Item {
 
-	protected int item_price;
-	protected int currentQuantity;
-	protected int multiQuantity;
+	private int item_price;
+	private int currentQuantity;
+	private int multiQuantity;
 	protected int total;
-	protected int multiPrice;
-	protected String name;
+	private int multiPrice;
+	private String name;
 	
 	public Item(String name) {
 		this.name = name;
